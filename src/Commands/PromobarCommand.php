@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Astrogoat\Promobar\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class PromobarCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'promobar';
 
     public $description = 'My command';
 
