@@ -2,16 +2,14 @@
 
 namespace Astrogoat\Promobar;
 
-use Astrogoat\Promobar\Http\Livewire\PayloadOld;
 use Astrogoat\Promobar\Http\Livewire\Payload;
-use Astrogoat\Promobar\Http\Livewire\Types\Inline;
+use Astrogoat\Promobar\Settings\PromobarSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
 use Illuminate\Support\Facades\Blade;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Astrogoat\Promobar\Settings\PromobarSettings;
 
 class PromobarServiceProvider extends PackageServiceProvider
 {
@@ -27,7 +25,7 @@ class PromobarServiceProvider extends PackageServiceProvider
 
     public function registeringPackage()
     {
-        $this->app->singleton(Promobar::class, fn() => new Promobar());
+        $this->app->singleton(Promobar::class, fn () => new Promobar());
 
         $this->callAfterResolving('lego', function (LegoManager $lego) {
             $lego->registerApp(fn (App $app) => $this->registerApp($app));

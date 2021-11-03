@@ -19,7 +19,7 @@ class Payload extends Component
 
     public function getTypes(): array
     {
-        return collect(app(Promobar::class)->getTypes())->mapWithKeys(fn($type, $key) => [$key => new $type])->toArray();
+        return collect(app(Promobar::class)->getTypes())->mapWithKeys(fn ($type, $key) => [$key => new $type()])->toArray();
     }
 
     public function getSelectedTypeInclude(): string
