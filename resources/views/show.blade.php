@@ -1,1 +1,3 @@
-@includeWhen($enabled, $type->renderComponent(), ['payload' => $payload])
+<div {{ $attributes }}>
+    @includeWhen($enabled, $type->renderComponent(), ['payload' => $payload])
+</div>

@@ -6,6 +6,7 @@
         background-color: {{ $payload['background_color'] ?? '#FFF' }};
     }
 </style>
+
 @isset($payload['content'])
     <div class="astrogoat_promobar">
         {!! $payload['content'] ?? '' !!}
