@@ -18,7 +18,7 @@ class PayloadCast extends SettingsCast
         return $payload;
     }
 
-    public function render() : string
+    public function render(): string
     {
         return 'astrogoat.promobar.payload';
     }

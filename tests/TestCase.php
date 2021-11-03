@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Promobar\Tests;
 
+use Astrogoat\Promobar\PromobarServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Promobar\PromobarServiceProvider;
 
 class TestCase extends Orchestra
 {

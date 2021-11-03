@@ -4,7 +4,6 @@ namespace Astrogoat\Promobar;
 
 use Astrogoat\Promobar\Settings\PromobarSettings;
 use Astrogoat\Promobar\Types\InlineType;
-use Astrogoat\Promobar\Types\PopupType;
 
 class Promobar
 {
