@@ -28,7 +28,7 @@ class Promobar
 
     public function getCurrentType()
     {
-        $type = settings(PromobarSettings::class, 'payload')['type'];
+        $type = settings(PromobarSettings::class, 'payload')['type'] ?? 'inline';
 
         return $this->getType($type);
     }
