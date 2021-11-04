@@ -33,7 +33,7 @@ class Promobar
         return $this->getType($type);
     }
 
-    public function getPayload(): array
+    public function getPayload()
     {
         return settings(PromobarSettings::class, 'payload');
     }
