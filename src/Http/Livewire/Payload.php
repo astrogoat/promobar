@@ -29,6 +29,11 @@ class Payload extends Component
         return $type->renderSettings();
     }
 
+    public function updatedPayload()
+    {
+        $this->emitTo('helix.lego.apps.livewire.app-edit', 'settingKeyUpdated', ['key' => 'payload', 'value' => $this->payload]);
+    }
+
     public function render()
     {
         return view('promobar::settings.types.index');
