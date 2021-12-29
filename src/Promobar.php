@@ -26,8 +26,8 @@ class Promobar
         $type = settings(PromobarSettings::class, 'payload')['type'] ?? 'inline';
 
         return isset($this->types[$type])
-            ? new $this->types[$type]
-            : new $this->types['inline'];
+            ? new $this->types[$type]()
+            : new $this->types['inline']();
     }
 
     public function getPayload()
