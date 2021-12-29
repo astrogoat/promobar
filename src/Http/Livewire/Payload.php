@@ -24,7 +24,7 @@ class Payload extends Component
 
     public function getSelectedTypeInclude(): string
     {
-        $type = new (app(Promobar::class)->getTypes()[$this->payload['type']]);
+        $type = new (app(Promobar::class)->getCurrentType());
 
         return $type->renderSettings();
     }

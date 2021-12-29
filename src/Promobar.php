@@ -16,11 +16,6 @@ class Promobar
         return $this->types;
     }
 
-    public function getType(string $type)
-    {
-        return new ($this->types[$type]);
-    }
-
     public function addType(string $key, string $type)
     {
         $this->types[$key] = $type;
@@ -30,7 +25,9 @@ class Promobar
     {
         $type = settings(PromobarSettings::class, 'payload')['type'] ?? 'inline';
 
-        return $this->getType($type);
+        return isset($this->types[$type])
+            ? new $this->types[$type]
+            : new $this->types['inline'];
     }
 
     public function getPayload()
