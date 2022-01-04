@@ -2,7 +2,7 @@
 
 namespace Astrogoat\Promobar;
 
-use Astrogoat\Promobar\Http\Livewire\Payload;
+use Astrogoat\Promobar\Casts\Payload;
 use Astrogoat\Promobar\Settings\PromobarSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
@@ -36,7 +36,7 @@ class PromobarServiceProvider extends PackageServiceProvider
     {
         Blade::componentNamespace('Astrogoat\\Promobar\\View\\Components', 'promobar');
 
-        Livewire::component('astrogoat.promobar.payload', Payload::class);
+        Livewire::component('astrogoat.promobar.casts.payload', Payload::class);
     }
 
     public function configurePackage(Package $package): void

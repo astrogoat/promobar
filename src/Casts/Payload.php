@@ -1,19 +1,29 @@
 <?php
 
-namespace Astrogoat\Promobar\Http\Livewire;
+namespace Astrogoat\Promobar\Casts;
 
 use Astrogoat\Promobar\Promobar;
+use Helix\Lego\Apps\Contracts\SettingsCast;
 use Helix\Lego\Settings\AppSettings;
-use Livewire\Component;
 
-class Payload extends Component
+class Payload extends SettingsCast
 {
     public array $payload;
-    protected AppSettings $settings;
+
+    public function get($payload)
+    {
+        return $payload;
+    }
+
+    public function set($payload)
+    {
+        return $payload;
+    }
 
     public function mount(AppSettings $settings)
     {
-        $this->settings = $settings;
+        parent::mount($settings);
+
         $this->payload = blank($settings->payload) ? ['type' => 'inline'] : $settings->payload;
     }
 
@@ -24,14 +34,9 @@ class Payload extends Component
 
     public function getSelectedTypeInclude(): string
     {
-        $type = new (app(Promobar::class)->getCurrentType());
+        $type = new (app(Promobar::class)->getTypes()[$this->payload['type']]);
 
         return $type->renderSettings();
-    }
-
-    public function updatedPayload()
-    {
-        $this->emitTo('helix.lego.apps.livewire.app-edit', 'settingKeyUpdated', ['key' => 'payload', 'value' => $this->payload]);
     }
 
     public function render()

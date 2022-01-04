@@ -2,7 +2,7 @@
 
 namespace Astrogoat\Promobar\Settings;
 
-use Astrogoat\Promobar\Casts\PayloadCast;
+use Astrogoat\Promobar\Casts\Payload;
 use Helix\Lego\Settings\AppSettings;
 
 class PromobarSettings extends AppSettings
@@ -16,7 +16,7 @@ class PromobarSettings extends AppSettings
     public static function casts(): array
     {
         return [
-            'payload' => PayloadCast::class,
+            'payload' => Payload::class,
         ];
     }
 

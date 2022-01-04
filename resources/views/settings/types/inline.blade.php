@@ -3,7 +3,7 @@
         label="Content"
         class="mt-6"
         name="payload[content]"
-        wire:model="payload.content"
+        wire:model.debounce.500ms="payload.content"
         wire:key="promobar_content"
     />
 
