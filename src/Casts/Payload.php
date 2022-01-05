@@ -24,7 +24,12 @@ class Payload extends SettingsCast
     {
         parent::mount($settings);
 
-        $this->payload = blank($settings->payload) ? ['type' => 'inline'] : $settings->payload;
+        $this->payload = blank($this->settings->payload) ? ['type' => 'inline'] : $this->settings->payload;
+    }
+
+    public function updatingPayloadType()
+    {
+        $this->payload = [];
     }
 
     public function getTypes(): array

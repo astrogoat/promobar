@@ -9,5 +9,7 @@
         @endforeach
     </x-fab::forms.select>
 
-    @include($this->getSelectedTypeInclude())
+    <div wire:key="{{ $payload['type'] ?? 'default' }}">
+        @include($this->getSelectedTypeInclude())
+    </div>
 </div>
