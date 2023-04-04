@@ -1,5 +1,5 @@
 @if($timerIsRunning())
-    <div
+    <span
         x-data="
     {
         timer: {
@@ -33,7 +33,7 @@
         x-init="startCounter()"
         {{ $attributes }}
     >
-        <div x-show="timerIsRunning">
+        <span x-show="timerIsRunning">
             @if ($slot->isEmpty())
                 <span x-text="timer.days">{{ $days() }}</span> :
                 <span x-text="timer.hours">{{ $hours() }}</span> :
@@ -42,6 +42,6 @@
             @else
                 {{ $slot }}
             @endif
-        </div>
-    </div>
+        </span>
+    </span>
 @endif
