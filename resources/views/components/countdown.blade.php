@@ -9,7 +9,7 @@
             seconds: '{{ $seconds() }}',
         },
         timerType: '{{ $timerType }}',
-        endTime: '{{ $endsAtTime }}',
+        endsAtTime: '{{ $endsAtTime }}',
         startCounter: function () {
 
             if( this.timerType === '24'){
@@ -17,7 +17,7 @@
               let runningCounter = setInterval(() => {
                 let countDownDate = new Date({{ $endsAt->timestamp }} * 1000).getTime();
 
-                let [hours, minutes, seconds] = this.endTime.split(':');
+                let [hours, minutes, seconds] = this.endsAtTime.split(':');
 
 
                 let now = new Date();

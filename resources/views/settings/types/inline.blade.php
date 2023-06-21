@@ -55,7 +55,7 @@
         x-cloak
         x-show="payload.countdown_timer_enabled === true"
         wire:model="payload.countdown_timer_type"
-        wire:key="payload.countdown_timer_type"
+        wire:key="promobar_countdown_timer_type"
         name="payload[countdown_timer_type]"
         label="Countdown Timer Type"
     >
