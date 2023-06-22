@@ -13,37 +13,23 @@
         startCounter: function () {
 
             if( this.timerType === '24'){
-
               let runningCounter = setInterval(() => {
                 let countDownDate = new Date({{ $endsAt->timestamp }} * 1000).getTime();
-
                 let [hours, minutes, seconds] = this.endsAtTime.split(':');
-
-
                 let now = new Date();
-
                 let tomorrowEndTime = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, hours, minutes, seconds);
-
-
                 let tomorrowEndTimeDistance = tomorrowEndTime.getTime() - now.getTime();
-
-
                 let timeDistance = countDownDate - new Date().getTime();
-
                 if (timeDistance < 0 ) {
                     clearInterval(runningCounter);
                     return;
                 }
-
-
                 this.timer.days = this.formatCounter(Math.floor(tomorrowEndTimeDistance / (1000 * 60 * 60 * 24)));
                 this.timer.hours = this.formatCounter(Math.floor((tomorrowEndTimeDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
                 this.timer.minutes = this.formatCounter(Math.floor((tomorrowEndTimeDistance % (1000 * 60 * 60)) / (1000 * 60)));
                 this.timer.seconds = this.formatCounter(Math.floor((tomorrowEndTimeDistance % (1000 * 60)) / 1000));
             }, 1000);
-
         }else{
-
             let runningCounter = setInterval(() => {
                 let countDownDate = new Date({{ $endsAt->timestamp }} * 1000).getTime();
                 let timeDistance = countDownDate - new Date().getTime();
@@ -56,9 +42,7 @@
                 this.timer.minutes = this.formatCounter(Math.floor((timeDistance % (1000 * 60 * 60)) / (1000 * 60)));
                 this.timer.seconds = this.formatCounter(Math.floor((timeDistance % (1000 * 60)) / 1000));
             }, 1000);
-
         }
-
         },
         formatCounter: function (number) {
             return number.toString().padStart(2, '0');
