@@ -33,12 +33,35 @@
         x-init="startCounter()"
         {{ $attributes }}
     >
-        <span x-show="timerIsRunning">
+        <span class="flex gap-2" x-show="timerIsRunning">
             @if ($slot->isEmpty())
-                <span x-text="timer.days">{{ $days() }}</span> :
-                <span x-text="timer.hours">{{ $hours() }}</span> :
-                <span x-text="timer.minutes">{{ $minutes() }}</span> :
-                <span x-text="timer.seconds">{{ $seconds() }}</span>
+                <div class="flex flex-col w-12">
+                     <span
+                        class="days-block p-1 rounded font-bold"
+                        x-text="timer.days">{{ $days() }}</span>
+                    <span class="text-xs">Days</span>
+                </div>
+
+                <div class="flex flex-col w-12">
+                    <span
+                        class="months-block p-1 rounded font-bold"
+                        x-text="timer.hours">{{ $hours() }}</span>
+                    <span class="text-xs">Hours</span>
+                </div>
+
+                <div class="flex flex-col w-12">
+                    <span
+                        class="minutes-block p-1 rounded font-bold"
+                        x-text="timer.minutes">{{ $minutes() }}</span>
+                     <span class="text-xs">Mins</span>
+                </div>
+
+                <div class="flex flex-col w-12">
+                    <span
+                        class=" seconds-block p-1 rounded font-bold"
+                        x-text="timer.seconds">{{ $seconds() }}</span>
+                    <span class="text-xs">Secs</span>
+                </div>
             @else
                 {{ $slot }}
             @endif
