@@ -22,7 +22,7 @@
 
 @isset($payload['content'])
     <div
-        class="astrogoat_promobar"
+        class="astrogoat_promobar mt-4 flex flex-col lg:flex-row lg:mt-0"
     >
         <span class="mt-1">{!! $payload['content'] ?? '' !!}</span>
 
