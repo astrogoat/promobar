@@ -12,9 +12,9 @@
         margin-left: 10px;
     }
 
-    .astrogoat_promobar [class*="-block"]{
+    .astrogoat_promobar .countdown-block{
         background:  {{ $payload['countdown_timer_block_background_color'] ?? '' }};;
-        color: {{ $payload['countdown_timer_block_color'] ?? '' }};
+        color: {{ $payload['countdown_timer_block_color'] ?? $payload['text_color'] }};
 
     }
 
