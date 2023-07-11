@@ -13,16 +13,18 @@
     }
 
     .astrogoat_promobar .countdown-block{
-        background:  {{ $payload['countdown_timer_block_background_color'] ?? '' }};;
+        background:  {{ $payload['countdown_timer_block_background_color'] ?? '#FFF' }};;
         color: {{ $payload['countdown_timer_block_color'] ?? $payload['text_color'] }};
-
     }
 
+    .astrogoat_promobar .timer-container{
+        padding: 2px 0px;
+    }
 </style>
 
 @isset($payload['content'])
     <div
-        class="astrogoat_promobar mt-4 flex flex-col lg:flex-row lg:mt-0"
+        class="astrogoat_promobar mt-2 flex flex-col lg:flex-row lg:mt-0"
     >
         <span class="mt-1">{!! $payload['content'] ?? '' !!}</span>
 

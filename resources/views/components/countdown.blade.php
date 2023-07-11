@@ -98,37 +98,37 @@
         x-init="startCounter()"
         {{ $attributes }}
     >
-        <div class="flex gap-2 justify-center mt-4 md:mt-0" x-show="timerIsRunning">
+        <div class="flex gap-2 justify-center mt-4 md:mt-0 timer-container" x-show="timerIsRunning">
             @if ($slot->isEmpty())
 
             <div class="flex flex-col">
-                <div class="flex days-block gap-2 font-bold">
-                    <span class="countdown-block px-2 rounded" id="daysBlockOne">-</span>
-                    <span class="countdown-block px-2 rounded" id="daysBlockTwo">-</span>
+                <div class="flex days-block gap-1 font-bold">
+                    <span class="countdown-block px-2 rounded-sm" id="daysBlockOne">-</span>
+                    <span class="countdown-block px-2 rounded-sm" id="daysBlockTwo">-</span>
                 </div>
                 <span class="text-xs">Days</span>
             </div>
 
             <div class="flex flex-col">
-                <div class="flex months-block gap-2 font-bold">
-                    <span class="countdown-block px-2 rounded" id="hoursBlockOne">-</span>
-                    <span class="countdown-block px-2 rounded" id="hoursBlockTwo">-</span>
+                <div class="flex months-block gap-1 font-bold">
+                    <span class="countdown-block px-2 rounded-sm" id="hoursBlockOne">-</span>
+                    <span class="countdown-block px-2 rounded-sm" id="hoursBlockTwo">-</span>
                 </div>
                 <span class="text-xs">Hours</span>
             </div>
 
             <div class="flex flex-col">
-                    <div class="flex minutes-block gap-2  font-bold">
-                        <span class="countdown-block px-2 rounded" id="minutesBlockOne">-</span>
-                        <span class="countdown-block px-2 rounded" id="minutesBlockTwo">-</span>
+                    <div class="flex minutes-block gap-1  font-bold">
+                        <span class="countdown-block px-2 rounded-sm" id="minutesBlockOne">-</span>
+                        <span class="countdown-block px-2 rounded-sm" id="minutesBlockTwo">-</span>
                     </div>
                     <span class="text-xs">Mins</span>
             </div>
 
             <div class="flex flex-col">
-                <div class="flex seconds-block gap-2 rounded font-bold">
-                    <span class="countdown-block px-2 rounded" id="secondsBlockOne">-</span>
-                    <span class="countdown-block px-2 rounded" id="secondsBlockTwo">-</span>
+                <div class="flex seconds-block gap-1 rounded-sm font-bold">
+                    <span class="countdown-block px-2 rounded-sm" id="secondsBlockOne">-</span>
+                    <span class="countdown-block px-2 rounded-sm" id="secondsBlockTwo">-</span>
                 </div>
                 <span class="text-xs">Secs</span>
             </div>
