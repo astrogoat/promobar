@@ -106,7 +106,7 @@
                     <span class="countdown-block px-2 rounded-sm" id="daysBlockOne">-</span>
                     <span class="countdown-block px-2 rounded-sm" id="daysBlockTwo">-</span>
                 </div>
-                <span class="text-xs">Days</span>
+                <span class="text-xs font-bold">Days</span>
             </div>
 
             <div class="flex flex-col">
@@ -114,7 +114,7 @@
                     <span class="countdown-block px-2 rounded-sm" id="hoursBlockOne">-</span>
                     <span class="countdown-block px-2 rounded-sm" id="hoursBlockTwo">-</span>
                 </div>
-                <span class="text-xs">Hours</span>
+                <span class="text-xs font-bold">Hours</span>
             </div>
 
             <div class="flex flex-col">
@@ -122,7 +122,7 @@
                         <span class="countdown-block px-2 rounded-sm" id="minutesBlockOne">-</span>
                         <span class="countdown-block px-2 rounded-sm" id="minutesBlockTwo">-</span>
                     </div>
-                    <span class="text-xs">Mins</span>
+                    <span class="text-xs font-bold">Mins</span>
             </div>
 
             <div class="flex flex-col">
@@ -130,7 +130,7 @@
                     <span class="countdown-block px-2 rounded-sm" id="secondsBlockOne">-</span>
                     <span class="countdown-block px-2 rounded-sm" id="secondsBlockTwo">-</span>
                 </div>
-                <span class="text-xs">Secs</span>
+                <span class="text-xs font-bold">Secs</span>
             </div>
             @else
                 {{ $slot }}
