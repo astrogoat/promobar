@@ -101,7 +101,7 @@
         <div class="flex gap-2 justify-center mt-4 md:mt-0 timer-container" x-show="timerIsRunning">
             @if ($slot->isEmpty())
 
-            <div class="flex flex-col">
+            <div class="flex flex-col" x-show="timerType === 'regular'">
                 <div class="flex days-block gap-1 font-bold">
                     <span class="countdown-block px-2 rounded-sm" id="daysBlockOne">-</span>
                     <span class="countdown-block px-2 rounded-sm" id="daysBlockTwo">-</span>

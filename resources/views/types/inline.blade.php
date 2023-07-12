@@ -14,7 +14,7 @@
 
     .astrogoat_promobar .countdown-block{
         background:  {{ $payload['countdown_timer_block_background_color'] ?? '#FFF' }};;
-        color: {{ $payload['countdown_timer_block_color'] ?? $payload['text_color'] }};
+        color: $payload['text_color'] ?? '#FFF'  }};
     }
 
     .astrogoat_promobar .timer-container{

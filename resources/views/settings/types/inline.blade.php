@@ -103,14 +103,6 @@
             wire:model="payload.countdown_timer_block_background_color"
             wire:key="promobar_countdown_timer_block_background_color"
         />
-
-        <x-fab::forms.input
-            label="Block Color"
-            type="color"
-            wire:model="payload.countdown_timer_block_color"
-            wire:key="promobar_countdown_timer_block_color"
-        />
-
     </div>
 
     <x-fab::layouts.panel
