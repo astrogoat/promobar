@@ -98,7 +98,7 @@
         x-init="startCounter()"
         {{ $attributes }}
     >
-        <div class="flex gap-2 justify-center mt-4 md:mt-0 timer-container" x-show="timerIsRunning">
+        <div class="flex gap-2 justify-center mt-2 md:mt-0 timer-container" x-show="timerIsRunning">
             @if ($slot->isEmpty())
 
             <div class="flex flex-col" x-show="timerType === 'regular'">
