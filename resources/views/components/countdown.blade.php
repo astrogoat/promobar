@@ -74,7 +74,6 @@
                 this.timer.seconds = this.formatCounter(Math.floor((timeDistance % (1000 * 60)) / 1000));
 
                 daysBlockOne.textContent = String(Math.floor(this.timer.days / 10));
-
                 daysBlockTwo.textContent = String(this.timer.days % 10);
                 hoursBlockOne.textContent = String(Math.floor(this.timer.hours / 10));
                 hoursBlockTwo.textContent = String(this.timer.hours % 10);
@@ -106,7 +105,7 @@
                     <span class="countdown-block px-2 rounded-sm" id="daysBlockOne">-</span>
                     <span class="countdown-block px-2 rounded-sm" id="daysBlockTwo">-</span>
                 </div>
-                <span class="text-xs font-bold">Days</span>
+                <span class="text-xs font-bold block-info">Days</span>
             </div>
 
             <div class="flex flex-col">
@@ -114,7 +113,7 @@
                     <span class="countdown-block px-2 rounded-sm" id="hoursBlockOne">-</span>
                     <span class="countdown-block px-2 rounded-sm" id="hoursBlockTwo">-</span>
                 </div>
-                <span class="text-xs font-bold">Hours</span>
+                <span class="text-xs font-bold block-info">Hours</span>
             </div>
 
             <div class="flex flex-col">
@@ -122,7 +121,7 @@
                         <span class="countdown-block px-2 rounded-sm" id="minutesBlockOne">-</span>
                         <span class="countdown-block px-2 rounded-sm" id="minutesBlockTwo">-</span>
                     </div>
-                    <span class="text-xs font-bold">Mins</span>
+                    <span class="text-xs font-bold block-info">Mins</span>
             </div>
 
             <div class="flex flex-col">
@@ -130,7 +129,7 @@
                     <span class="countdown-block px-2 rounded-sm" id="secondsBlockOne">-</span>
                     <span class="countdown-block px-2 rounded-sm" id="secondsBlockTwo">-</span>
                 </div>
-                <span class="text-xs font-bold">Secs</span>
+                <span class="text-xs font-bold block-info">Secs</span>
             </div>
             @else
                 {{ $slot }}
