@@ -51,34 +51,46 @@
             :toggled="$payload['countdown_timer_enabled'] ?? false"
         />
 
-        <div
-            class="grid grid-cols-2 w-full fab-space-x-4"
+        <x-fab::forms.select
             x-cloak
             x-show="payload.countdown_timer_enabled === true"
+            wire:model="payload.countdown_timer_type"
+            wire:key="promobar_countdown_timer_type"
+            name="payload[countdown_timer_type]"
+            label="Countdown Timer Type"
         >
-            <x-fab::forms.date-picker
-                label="Count down until"
-                wire:model="payload.countdown_timer_end_date"
-                wire:key="promobar_countdown_timer_end_date"
-                hint="Required"
-                :options="[
-                    'altInput' => true,
-                    'altFormat' => 'D, M J, Y - G:i K',
-                    'enableTime' => true
-                ]"
-            />
+            <option value="regular">Regular Countdown</option>
+            <option value="24">24 Hours Countdown</option>
+        </x-fab::forms.select>
 
-            <x-fab::forms.date-picker
-                label="Show timer after"
-                wire:model="payload.countdown_timer_start_date"
-                wire:key="promobar_countdown_timer_start_date"
-                hint="Optional"
-                :options="[
-                    'altInput' => true,
-                    'altFormat' => 'D, M J, Y - G:i K',
-                    'enableTime' => true
-                ]"
-            />
+    <div
+        class="grid grid-cols-2 w-full fab-space-x-4"
+        x-cloak
+        x-show="payload.countdown_timer_enabled === true"
+    >
+        <x-fab::forms.date-picker
+            label="Count down until"
+            wire:model="payload.countdown_timer_end_date"
+            wire:key="promobar_countdown_timer_end_date"
+            hint="Required"
+            :options="[
+                'altInput' => true,
+                'altFormat' => 'D, M J, Y - G:i K',
+                'enableTime' => true
+            ]"
+        />
+
+        <x-fab::forms.date-picker
+            label="Show timer after"
+            wire:model="payload.countdown_timer_start_date"
+            wire:key="promobar_countdown_timer_start_date"
+            hint="Optional"
+            :options="[
+                'altInput' => true,
+                'altFormat' => 'D, M J, Y - G:i K',
+                'enableTime' => true
+            ]"
+        />
 
         </div>
     </div>
