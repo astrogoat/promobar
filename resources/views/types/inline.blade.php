@@ -17,7 +17,7 @@
     <div
         class="astrogoat_promobar"
     >
-        <span>{!! $payload['content'] ?? '' !!}</span>
+        <span class="text-xs sm:text-sm">{!! $payload['content'] ?? '' !!}</span>
 
         @if($payload['countdown_timer_enabled'] ?? false)
             <x-promobar::countdown :payload="$payload" class="astrogoat_promobar_countdown" />
