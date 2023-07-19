@@ -26,7 +26,7 @@
     <div
         class="astrogoat_promobar mt-2 flex flex-col lg:flex-row lg:mt-0"
     >
-        <span class="mt-1">{!! $payload['content'] ?? '' !!}</span>
+        <span class="text-xs sm:text-sm">{!! $payload['content'] ?? '' !!}</span>
 
         @if($payload['countdown_timer_enabled'] ?? false)
             <x-promobar::countdown :payload="$payload" class="astrogoat_promobar_countdown" />
