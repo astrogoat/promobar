@@ -13,12 +13,41 @@
     }
 
     .astrogoat_promobar .countdown-block{
-        background:  {{ $payload['countdown_timer_block_background_color'] ?? '#FFF' }};;
-        color: {{ $payload['text_color'] ?? '#FFF'  }};
+        background: {{ $payload['countdown_timer_block_background_color'] ?? '#FFF' }};
+        color: {{ $payload['text_color'] ?? '#000'  }};
+        margin: 0px {{ $payload['countdown_timer_block_padding'] ?? 2 }}px;
     }
 
     .astrogoat_promobar .timer-container{
         padding: 2px 0px;
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    @media (min-width: 768px) {
+        .zaius-promobar .container {
+            max-width: 768px;
+        }
+
+        .astrogoat_promobar .timer-container{
+            padding: 2px 0px;
+            margin-top: 2px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .astrogoat_promobar .container {
+            max-width: 1280px;
+        }
+
+        .astrogoat_promobar .timer-container{
+            padding: 2px 0px;
+            margin-top: -4px;
+        }
+
+        .astrogoat_promobar .md\:justify-center .timer-container{
+            margin-top: 14px;
+        }
     }
 </style>
 
