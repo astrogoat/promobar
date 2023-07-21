@@ -117,11 +117,11 @@
             </div>
 
             <div class="flex flex-col">
-                    <div class="flex minutes-block gap-1  font-bold">
-                        <span class="countdown-block px-2 rounded-sm" id="minutesBlockOne">-</span>
-                        <span class="countdown-block px-2 rounded-sm" id="minutesBlockTwo">-</span>
-                    </div>
-                    <span class="text-xs font-bold block-info">Mins</span>
+                <div class="flex minutes-block gap-1  font-bold">
+                    <span class="countdown-block px-2 rounded-sm" id="minutesBlockOne">-</span>
+                    <span class="countdown-block px-2 rounded-sm" id="minutesBlockTwo">-</span>
+                </div>
+                <span class="text-xs font-bold block-info">Mins</span>
             </div>
 
             <div class="flex flex-col">
