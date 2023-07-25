@@ -12,20 +12,43 @@
         margin-left: 10px;
     }
 
-    .astrogoat_promobar .countdown-block{
+    .astrogoat_promobar .countdown-block {
+        padding: 0 0.5rem;
+        border-radius: 0.125rem;
         background: {{ $payload['countdown_timer_block_background_color'] ?? '#FFF' }};
         color: {{ $payload['text_color'] ?? '#000'  }};
         margin: 0px {{ $payload['countdown_timer_block_padding'] ?? 2 }}px;
     }
 
-    .astrogoat_promobar .timer-container{
+    .astrogoat_promobar .timer-container {
         padding: 2px 0px;
         text-align: center;
         margin-top: 4px;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .astrogoat_promobar .block-info {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .astrogoat_promobar .text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    .astrogoat_promobar .seconds-block,
+    .astrogoat_promobar .minutes-block,
+    .astrogoat_promobar .months-block,
+    .astrogoat_promobar .days-block {
+        font-weight: bold;
+        display: flex;
+        gap: 0.25rem;
     }
 
     @media (min-width: 768px) {
-        .zaius-promobar .container {
+        .astrogoat_promobar .container {
             max-width: 768px;
         }
 
@@ -40,12 +63,12 @@
             max-width: 1280px;
         }
 
-        .astrogoat_promobar .timer-container{
+        .astrogoat_promobar .timer-container {
             padding: 2px 0px;
             margin-top: -4px;
         }
 
-        .astrogoat_promobar .md\:justify-center .timer-container{
+        .astrogoat_promobar .md\:justify-center .timer-container {
             margin-top: 14px;
         }
     }
