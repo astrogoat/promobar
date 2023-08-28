@@ -76,9 +76,9 @@
 
 @isset($payload['content'])
     <div
-        class="astrogoat_promobar mt-2 flex flex-col lg:flex-row lg:mt-0"
+        class="astrogoat_promobar flex flex-col lg:flex-row"
     >
-        <span class="text-xs sm:text-sm">{!! $payload['content'] ?? '' !!}</span>
+        <span>{!! $payload['content'] ?? '' !!}</span>
 
         @if($payload['countdown_timer_enabled'] ?? false)
             <x-promobar::countdown :payload="$payload" class="astrogoat_promobar_countdown" />
