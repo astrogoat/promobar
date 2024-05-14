@@ -130,7 +130,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Kristoffer Tonning](https://github.com/astrogoat)
+- [Laura Tonning](https://github.com/astrogoat)
 - [All Contributors](../../contributors)
 
 This promobar package is forked from the awesome [Spatie promobar package](https://github.com/spatie/package-promobar-laravel#support-us). Please go support them if you can.
