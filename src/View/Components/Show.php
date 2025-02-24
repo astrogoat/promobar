@@ -8,9 +8,9 @@ use Illuminate\View\Component;
 
 class Show extends Component
 {
-    const ABOVE = 1;
-    const BELOW = 2;
-    const ABOVE_AND_BELOW = 3;
+    public const ABOVE = 1;
+    public const BELOW = 2;
+    public const ABOVE_AND_BELOW = 3;
 
     public function __construct(public ?int $position = null)
     {
