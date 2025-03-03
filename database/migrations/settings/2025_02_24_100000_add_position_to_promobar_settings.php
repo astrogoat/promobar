@@ -6,7 +6,7 @@ return new class extends SettingsMigration
 {
     public function up(): void
     {
-        $this->migrator->add('promobar.position', 1);
+        $this->migrator->add('promobar.position', "1");
     }
 
     public function down()
